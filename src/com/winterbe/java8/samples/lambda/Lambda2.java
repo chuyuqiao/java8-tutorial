@@ -16,11 +16,15 @@ public class Lambda2 {
         }
     }
 
+    @FunctionalInterface
     interface PersonFactory<P extends Person> {
         P create(String firstName, String lastName);
     }
 
     public static void main(String[] args) {
+
+        // lambda expressions
+
         Converter<String, Integer> integerConverter1 = (from) -> Integer.valueOf(from);
         Integer converted1 = integerConverter1.convert("123");
         System.out.println(converted1);   // result: 123

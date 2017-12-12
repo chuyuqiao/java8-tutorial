@@ -24,7 +24,6 @@ public class Lambda3 {
     public static void main(String[] args) throws Exception {
 
         // Predicates
-
         Predicate<String> predicate = (s) -> s.length() > 0;
 
         predicate.test("foo");              // true

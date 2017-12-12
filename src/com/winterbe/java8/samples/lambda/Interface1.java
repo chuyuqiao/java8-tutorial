@@ -6,12 +6,30 @@ package com.winterbe.java8.samples.lambda;
 public class Interface1 {
 
     interface Formula {
+        /**
+         * abstract method
+         *
+         * @param a
+         * @return
+         */
         double calculate(int a);
 
+        /**
+         * default method
+         *
+         * @param a
+         * @return
+         */
         default double sqrt(int a) {
             return Math.sqrt(positive(a));
         }
 
+        /**
+         * static method
+         *
+         * @param a
+         * @return
+         */
         static int positive(int a) {
             return a > 0 ? a : 0;
         }

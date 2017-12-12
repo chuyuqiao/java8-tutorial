@@ -22,6 +22,7 @@ public class Lambda4 {
             outerNum = 13;
             return String.valueOf(from);
         };
+        System.out.println(stringConverter2.convert(2));
 
         String[] array = new String[1];
         Lambda2.Converter<Integer, String> stringConverter3 = (from) -> {

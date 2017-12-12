@@ -9,6 +9,7 @@ import java.util.function.BiConsumer;
 public class Lambda5 {
 
     //Pre-Defined Functional Interfaces
+
     public static void main(String... args) {
 
         //BiConsumer Example

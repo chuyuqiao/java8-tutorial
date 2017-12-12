@@ -27,6 +27,7 @@ public class Lambda1 {
 
         Collections.sort(names, (String a, String b) -> b.compareTo(a));
 
+        // lambda expressions
         Collections.sort(names, (a, b) -> b.compareTo(a));
 
         System.out.println(names);
@@ -36,6 +37,7 @@ public class Lambda1 {
         System.out.println(names);
 
         List<String> names2 = Arrays.asList("peter", null, "anna", "mike", "xenia");
+        // method references
         names2.sort(Comparator.nullsLast(String::compareTo));
         System.out.println(names2);
 
@@ -44,6 +46,12 @@ public class Lambda1 {
         Optional.ofNullable(names3).ifPresent(list -> list.sort(Comparator.naturalOrder()));
 
         System.out.println(names3);
+
+        List<String> names4 = names;
+
+        Optional.ofNullable(names4).ifPresent(list -> list.sort(Comparator.naturalOrder()));
+
+        System.out.println(names4);
     }
 
 }
